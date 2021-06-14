@@ -39,6 +39,7 @@ import { P, C } from '../common/flags';
 import NewUser from '../user/NewUser';
 import ResetPassword from '../user/ResetPassword/ResetPassword';
 import ForgottenPassword from '../user/ForgottenPassword/ForgottenPassword';
+import ProjectListNew from '../project/ProjectListNew/ProjectListNew';
 
 export const routes = [
     // Features
@@ -215,12 +216,20 @@ export const routes = [
         type: 'protected',
         layout: 'main',
     },
-
     {
         path: '/projects',
         title: 'Projects',
         icon: 'folder_open',
         component: ListProjects,
+        flag: P,
+        type: 'protected',
+        layout: 'main',
+    },
+    {
+        path: '/projects-new',
+        title: 'Projects New',
+        icon: 'folder_open',
+        component: ProjectListNew,
         flag: P,
         type: 'protected',
         layout: 'main',
